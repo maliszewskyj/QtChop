@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>713</width>
+         <height>536</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="Ratio_Label">
+          <property name="text">
+           <string>Ratio</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="Ratio_1"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="Ratio_2"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="Ratio_3"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLineEdit" name="Ratio_4"/>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLineEdit" name="Ratio_5"/>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLineEdit" name="Ratio_6"/>
+        </item>
+        <item row="0" column="7">
+         <widget class="QLineEdit" name="Ratio_7"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="NomSpeed_label">
+          <property name="text">
+           <string>NomSpeed (rpm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="NomSpeed_1"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="NomSpeed_2"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="NomSpeed_3"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="NomSpeed_4"/>
+        </item>
+        <item row="1" column="5">
+         <widget class="QLineEdit" name="NomSpeed_5"/>
+        </item>
+        <item row="1" column="6">
+         <widget class="QLineEdit" name="NomSpeed_6"/>
+        </item>
+        <item row="1" column="7">
+         <widget class="QLineEdit" name="NomSpeed_7"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="ActSpeed_label">
+          <property name="text">
+           <string>ActSpeed (rpm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="ActSpeed_1"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="ActSpeed_2"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="ActSpeed_3"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="ActSpeed_4"/>
+        </item>
+        <item row="2" column="5">
+         <widget class="QLineEdit" name="ActSpeed_5"/>
+        </item>
+        <item row="2" column="6">
+         <widget class="QLineEdit" name="ActSpeed_6"/>
+        </item>
+        <item row="2" column="7">
+         <widget class="QLineEdit" name="ActSpeed_7"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="NomPhase_label">
+          <property name="text">
+           <string>Nom Phase (d)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="NomPhase_1"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="NomPhase_2"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="NomPhase_3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="NomPhase_4"/>
+        </item>
+        <item row="3" column="5">
+         <widget class="QLineEdit" name="NomPhase_5"/>
+        </item>
+        <item row="3" column="6">
+         <widget class="QLineEdit" name="NomPhase_6"/>
+        </item>
+        <item row="3" column="7">
+         <widget class="QLineEdit" name="NomPhase_7"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="ActPhase_label">
+          <property name="text">
+           <string>Act Phase (d)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="ActPhase_1"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="ActPhase_2"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="ActPhase_3"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLineEdit" name="ActPhase_4"/>
+        </item>
+        <item row="4" column="5">
+         <widget class="QLineEdit" name="ActPhase_5"/>
+        </item>
+        <item row="4" column="6">
+         <widget class="QLineEdit" name="ActPhase_6"/>
+        </item>
+        <item row="4" column="7">
+         <widget class="QLineEdit" name="ActPhase_7"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="MeanDev_label">
+          <property name="text">
+           <string>Mean Dev (d)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="MeanDev_1"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="MeanDev_2"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="MeanDev_3"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLineEdit" name="MeanDev_4"/>
+        </item>
+        <item row="5" column="5">
+         <widget class="QLineEdit" name="MeanDev_5"/>
+        </item>
+        <item row="5" column="6">
+         <widget class="QLineEdit" name="MeanDev_6"/>
+        </item>
+        <item row="5" column="7">
+         <widget class="QLineEdit" name="MeanDev_7"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="GateWidth_label">
+          <property name="text">
+           <string>Gate Width (d)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="GateWidth_1"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QLineEdit" name="GateWidth_2"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="GateWidth_3"/>
+        </item>
+        <item row="6" column="4">
+         <widget class="QLineEdit" name="GateWidth_4"/>
+        </item>
+        <item row="6" column="5">
+         <widget class="QLineEdit" name="GateWidth_5"/>
+        </item>
+        <item row="6" column="6">
+         <widget class="QLineEdit" name="GateWidth_6"/>
+        </item>
+        <item row="6" column="7">
+         <widget class="QLineEdit" name="GateWidth_7"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="Outage_label">
+          <property name="text">
+           <string>Outage (%)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="Outage_1"/>
+        </item>
+        <item row="7" column="2">
+         <widget class="QLineEdit" name="Outage_2"/>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLineEdit" name="Outage_3"/>
+        </item>
+        <item row="7" column="4">
+         <widget class="QLineEdit" name="Outage_4"/>
+        </item>
+        <item row="7" column="5">
+         <widget class="QLineEdit" name="Outage_5"/>
+        </item>
+        <item row="7" column="6">
+         <widget class="QLineEdit" name="Outage_6"/>
+        </item>
+        <item row="7" column="7">
+         <widget class="QLineEdit" name="Outage_7"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="DCSupply_label">
+          <property name="text">
+           <string>DC Supply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLineEdit" name="DCSupply_1"/>
+        </item>
+        <item row="8" column="2">
+         <widget class="QLineEdit" name="DCSupply_2"/>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLineEdit" name="DCSupply_3"/>
+        </item>
+        <item row="8" column="4">
+         <widget class="QLineEdit" name="DCSupply_4"/>
+        </item>
+        <item row="8" column="5">
+         <widget class="QLineEdit" name="DCSupply_5"/>
+        </item>
+        <item row="8" column="6">
+         <widget class="QLineEdit" name="DCSupply_6"/>
+        </item>
+        <item row="8" column="7">
+         <widget class="QLineEdit" name="DCSupply_7"/>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="LastCommand_label">
+          <property name="text">
+           <string>Last Command</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QLineEdit" name="LastCommand_1"/>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLineEdit" name="LastCommand_2"/>
+        </item>
+        <item row="9" column="3">
+         <widget class="QLineEdit" name="LastCommand_3"/>
+        </item>
+        <item row="9" column="4">
+         <widget class="QLineEdit" name="LastCommand_4"/>
+        </item>
+        <item row="9" column="5">
+         <widget class="QLineEdit" name="LastCommand_5"/>
+        </item>
+        <item row="9" column="6">
+         <widget class="QLineEdit" name="LastCommand_6"/>
+        </item>
+        <item row="9" column="7">
+         <widget class="QLineEdit" name="LastCommand_7"/>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="DriveMode_label">
+          <property name="text">
+           <string>Drive Mode</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QLineEdit" name="DriveMode_1"/>
+        </item>
+        <item row="10" column="2">
+         <widget class="QLineEdit" name="DriveMode_2"/>
+        </item>
+        <item row="10" column="3">
+         <widget class="QLineEdit" name="DriveMode_3"/>
+        </item>
+        <item row="10" column="4">
+         <widget class="QLineEdit" name="DriveMode_4"/>
+        </item>
+        <item row="10" column="5">
+         <widget class="QLineEdit" name="DriveMode_5"/>
+        </item>
+        <item row="10" column="6">
+         <widget class="QLineEdit" name="DriveMode_6"/>
+        </item>
+        <item row="10" column="7">
+         <widget class="QLineEdit" name="DriveMode_7"/>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="DriveCurrent_label">
+          <property name="text">
+           <string>Drive Current</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QLineEdit" name="DriveCurrent_1"/>
+        </item>
+        <item row="11" column="2">
+         <widget class="QLineEdit" name="DriveCurrent_2"/>
+        </item>
+        <item row="11" column="3">
+         <widget class="QLineEdit" name="DriveCurrent_3"/>
+        </item>
+        <item row="11" column="4">
+         <widget class="QLineEdit" name="DriveCurrent_4"/>
+        </item>
+        <item row="11" column="5">
+         <widget class="QLineEdit" name="DriveCurrent_5"/>
+        </item>
+        <item row="11" column="6">
+         <widget class="QLineEdit" name="DriveCurrent_6"/>
+        </item>
+        <item row="11" column="7">
+         <widget class="QLineEdit" name="DriveCurrent_7"/>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="MagBearing_label">
+          <property name="text">
+           <string>Mag Bearing</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QLineEdit" name="MagBearing_1"/>
+        </item>
+        <item row="12" column="2">
+         <widget class="QLineEdit" name="MagBearing_2"/>
+        </item>
+        <item row="12" column="3">
+         <widget class="QLineEdit" name="MagBearing_3"/>
+        </item>
+        <item row="12" column="4">
+         <widget class="QLineEdit" name="MagBearing_4"/>
+        </item>
+        <item row="12" column="5">
+         <widget class="QLineEdit" name="MagBearing_5"/>
+        </item>
+        <item row="12" column="6">
+         <widget class="QLineEdit" name="MagBearing_6"/>
+        </item>
+        <item row="12" column="7">
+         <widget class="QLineEdit" name="MagBearing_7"/>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="Interface_label">
+          <property name="text">
+           <string>Interface  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QLineEdit" name="Interface_1"/>
+        </item>
+        <item row="13" column="2">
+         <widget class="QLineEdit" name="Interface_2"/>
+        </item>
+        <item row="13" column="3">
+         <widget class="QLineEdit" name="Interface_3"/>
+        </item>
+        <item row="13" column="4">
+         <widget class="QLineEdit" name="Interface_4"/>
+        </item>
+        <item row="13" column="5">
+         <widget class="QLineEdit" name="Interface_5"/>
+        </item>
+        <item row="13" column="6">
+         <widget class="QLineEdit" name="Interface_6"/>
+        </item>
+        <item row="13" column="7">
+         <widget class="QLineEdit" name="Interface_7"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>733</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Quit"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
