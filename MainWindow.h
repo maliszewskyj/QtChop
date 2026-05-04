@@ -6,6 +6,7 @@
 #include <QRegularExpression>
 #include <QDebug>
 #include "Chop_Def.h"
+#include "Chopper.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,9 +36,14 @@ public:
     QString m_IncomingHost;
     QByteArray m_OutgoingHost;
 
+    Chopper * Chop[NoOfChoppers];
+
     void SetupSerial();
 
     void RequestBlock(int index);
+    void DecodeBlock();
+    unsigned int DoCheckSum(const QString pkg);
+    void AnalyzePackage(const QString pkg);
 public slots:
     void Refresh();
     void onReadChopper();

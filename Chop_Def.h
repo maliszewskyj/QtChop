@@ -58,40 +58,40 @@
 #define STAT_AZOF     0x1000 // Set when AZ voltage exceeds limits
 
 // Data identifiers for data transmission PC to SLAVE choppers
-#define ID_Command     1  // Command word
-#define ID_Status      2  // Status word
-#define ID_RefSpeed    3  // Nominal speed
-#define ID_ActSpeed    4  // Actual speed
-#define ID_Ratio       5  // Ratio to nominal speed
-#define ID_NomPhLW     6  // Nominal phase / low  word
-#define ID_NomPhHW     7  // Nominal phase / high word
-#define ID_Gate        8  // Gate window
-#define ID_ActPhLW     9  // Actual  phase / low  word
-#define ID_ActPhHW     A  // Actual  phase / high word
-#define ID_DriveCurr   B  // Drive current
-#define ID_AZVolt      C  // Auto zero voltage of magnetic bearing
+#define ID_Command     '1'  // Command word
+#define ID_Status      '2'  // Status word
+#define ID_RefSpeed    '3'  // Nominal speed
+#define ID_ActSpeed    '4'  // Actual speed
+#define ID_Ratio       '5'  // Ratio to nominal speed
+#define ID_NomPhLW     '6'  // Nominal phase / low  word
+#define ID_NomPhHW     '7'  // Nominal phase / high word
+#define ID_Gate        '8'  // Gate window
+#define ID_ActPhLW     '9'  // Actual  phase / low  word
+#define ID_ActPhHW     'A'  // Actual  phase / high word
+#define ID_DriveCurr   'B'  // Drive current
+#define ID_AZVolt      'C'  // Auto zero voltage of magnetic bearing
 
 // Data identifiers for data transmission PC to client computer
-#define IDREF_Command  1 // Command Word
-#define IDREF_CGate    2 // Gate of coincidence choppers
-#define IDREF_RefSpeed 3 // Reference speed
-#define IDREF_PhaseLW1 4 // Delay of ref mark; lo/hi word; chopper number
-#define IDREF_PhaseHW1 5 //
-#define IDREF_PhaseLW2 6
-#define IDREF_PhaseHW2 7
-#define IDREF_PhaseLW3 8
-#define IDREF_PhaseHW3 9
-#define IDREF_PhaseLW4 A
-#define IDREF_PhaseHW4 B
-#define IDREF_PhaseLW5 C
-#define IDREF_PhaseHW5 D
-#define IDREF_PhaseLW6 E
-#define IDREF_PhaseHW6 F
-#define IDREF_PhaseLW7 G
-#define IDREF_PhaseHW7 H
-#define IDREF_RadSense I // Number of "active" radial sensor
-#define IDREF_CDelayLW J // Delay of coincidence signal
-#define IDREF_CDelayHW K
+#define IDREF_Command  '1' // Command Word
+#define IDREF_CGate    '2' // Gate of coincidence choppers
+#define IDREF_RefSpeed '3' // Reference speed
+#define IDREF_PhaseLW1 '4' // Delay of ref mark; lo/hi word; chopper number
+#define IDREF_PhaseHW1 '5' //
+#define IDREF_PhaseLW2 '6'
+#define IDREF_PhaseHW2 '7'
+#define IDREF_PhaseLW3 '8'
+#define IDREF_PhaseHW3 '9'
+#define IDREF_PhaseLW4 'A'
+#define IDREF_PhaseHW4 'B'
+#define IDREF_PhaseLW5 'C'
+#define IDREF_PhaseHW5 'D'
+#define IDREF_PhaseLW6 'E'
+#define IDREF_PhaseHW6 'F'
+#define IDREF_PhaseLW7 'G'
+#define IDREF_PhaseHW7 'H'
+#define IDREF_RadSense 'I' // Number of "active" radial sensor
+#define IDREF_CDelayLW 'J' // Delay of coincidence signal
+#define IDREF_CDelayHW 'K'
 
 // Timers
 #define PROG_LogPeriod    900 // Regular log file entries (seconds)
