@@ -12,8 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
         Chop[i] = new Chopper();
     }
 
-
-
 }
 
 MainWindow::~MainWindow()
@@ -21,9 +19,111 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::SetupGUI()
+{
+    // The display widget is big and awkward.
+    // No clever way to populate the widgets so here we go.
+    // Ratio
+    m_Ratio[0] = ui->Ratio_1;
+    m_Ratio[1] = ui->Ratio_2;
+    m_Ratio[2] = ui->Ratio_3;
+    m_Ratio[3] = ui->Ratio_4;
+    m_Ratio[4] = ui->Ratio_5;
+    m_Ratio[5] = ui->Ratio_6;
+    m_Ratio[6] = ui->Ratio_7;
+
+    m_NomSpeed[0] = ui->NomSpeed_1;
+    m_NomSpeed[1] = ui->NomSpeed_2;
+    m_NomSpeed[2] = ui->NomSpeed_3;
+    m_NomSpeed[3] = ui->NomSpeed_4;
+    m_NomSpeed[4] = ui->NomSpeed_5;
+    m_NomSpeed[5] = ui->NomSpeed_6;
+    m_NomSpeed[6] = ui->NomSpeed_7;
+
+    m_ActSpeed[0] = ui->ActSpeed_1;
+    m_ActSpeed[1] = ui->ActSpeed_2;
+    m_ActSpeed[2] = ui->ActSpeed_3;
+    m_ActSpeed[3] = ui->ActSpeed_4;
+    m_ActSpeed[4] = ui->ActSpeed_5;
+    m_ActSpeed[5] = ui->ActSpeed_6;
+    m_ActSpeed[6] = ui->ActSpeed_7;
+
+    m_NomPhase[0] = ui->NomPhase_1;
+    m_NomPhase[1] = ui->NomPhase_2;
+    m_NomPhase[2] = ui->NomPhase_3;
+    m_NomPhase[3] = ui->NomPhase_4;
+    m_NomPhase[4] = ui->NomPhase_5;
+    m_NomPhase[5] = ui->NomPhase_6;
+    m_NomPhase[6] = ui->NomPhase_7;
+
+    m_ActPhase[0] = ui->ActPhase_1;
+    m_ActPhase[1] = ui->ActPhase_2;
+    m_ActPhase[2] = ui->ActPhase_3;
+    m_ActPhase[3] = ui->ActPhase_4;
+    m_ActPhase[4] = ui->ActPhase_5;
+    m_ActPhase[5] = ui->ActPhase_6;
+    m_ActPhase[6] = ui->ActPhase_7;
+
+    m_MeanDev[0] = ui->MeanDev_1;
+    m_MeanDev[1] = ui->MeanDev_2;
+    m_MeanDev[2] = ui->MeanDev_3;
+    m_MeanDev[3] = ui->MeanDev_4;
+    m_MeanDev[4] = ui->MeanDev_5;
+    m_MeanDev[5] = ui->MeanDev_6;
+    m_MeanDev[6] = ui->MeanDev_7;
+
+    m_GateWidth[0] = ui->GateWidth_1;
+    m_GateWidth[1] = ui->GateWidth_2;
+    m_GateWidth[2] = ui->GateWidth_3;
+    m_GateWidth[3] = ui->GateWidth_4;
+    m_GateWidth[4] = ui->GateWidth_5;
+    m_GateWidth[5] = ui->GateWidth_6;
+    m_GateWidth[6] = ui->GateWidth_7;
+
+    m_Outage[0] = ui->Outage_1;
+    m_Outage[1] = ui->Outage_2;
+    m_Outage[2] = ui->Outage_3;
+    m_Outage[3] = ui->Outage_4;
+    m_Outage[4] = ui->Outage_5;
+    m_Outage[5] = ui->Outage_6;
+    m_Outage[6] = ui->Outage_7;
+
+    m_DCSupply[0] = ui->DCSupply_1;
+    m_DCSupply[1] = ui->DCSupply_2;
+    m_DCSupply[2] = ui->DCSupply_3;
+    m_DCSupply[3] = ui->DCSupply_4;
+    m_DCSupply[4] = ui->DCSupply_5;
+    m_DCSupply[5] = ui->DCSupply_6;
+    m_DCSupply[6] = ui->DCSupply_7;
+
+    m_LastCommand[0] = ui->LastCommand_1;
+    m_LastCommand[1] = ui->LastCommand_2;
+    m_LastCommand[2] = ui->LastCommand_3;
+    m_LastCommand[3] = ui->LastCommand_4;
+    m_LastCommand[4] = ui->LastCommand_5;
+    m_LastCommand[5] = ui->LastCommand_6;
+    m_LastCommand[6] = ui->LastCommand_7;
+
+    m_DriveMode[0] = ui->DriveMode_1;
+    m_DriveMode[1] = ui->DriveMode_2;
+    m_DriveMode[2] = ui->DriveMode_3;
+    m_DriveMode[3] = ui->DriveMode_4;
+    m_DriveMode[4] = ui->DriveMode_5;
+    m_DriveMode[5] = ui->DriveMode_6;
+    m_DriveMode[6] = ui->DriveMode_7;
+
+    m_DriveCurrent[0] = ui->DriveCurrent_1;
+    m_DriveCurrent[1] = ui->DriveCurrent_2;
+    m_DriveCurrent[2] = ui->DriveCurrent_3;
+    m_DriveCurrent[3] = ui->DriveCurrent_4;
+    m_DriveCurrent[4] = ui->DriveCurrent_5;
+    m_DriveCurrent[5] = ui->DriveCurrent_6;
+    m_DriveCurrent[6] = ui->DriveCurrent_7;
+}
+
 void MainWindow::SetupSerial()
 {
-    // Should get this from configuration
+    // Should get this from configuNomPhasen
     m_ChopperPortName = "/dev/ttyChopper";
     m_BaudRate = QSerialPort::Baud57600;
     m_DataBits = QSerialPort::Data8;
@@ -56,9 +156,11 @@ void MainWindow::RequestBlock(int index)
 {
     if (index < 0 || index > NoOfChoppers) return; //
     m_OutgoingChopper = "#" + QByteArray::number(index) + "0000000$";
+    qDebug() << "> " << m_OutgoingChopper;
     m_ChopperPort->write(m_OutgoingChopper);
 }
 
+// Refresh data items in the grid
 void MainWindow::Refresh()
 {
 
@@ -72,11 +174,13 @@ void MainWindow::onReadChopper()
     input = m_ChopperPort->readAll();
     m_IncomingChopper.append(input);
     if (m_IncomingChopper.contains('$')) {
+        qDebug() << "> " << m_IncomingChopper;
         QStringList list  = m_IncomingChopper.split('$');
         if (list[0].length()==0) {
             m_IncomingChopper = "";
         } else {
             // Process the whole block
+            DecodeBlock();
         }
     }
 }
@@ -193,20 +297,25 @@ void MainWindow::AnalyzePackage(const QString pkg)
             Chop[num]->Ratio = package_data;
             break;
         case ID_NomPhLW:     // Nominal phase / low  word
+            Chop[num]->NomPhaseLW = package_data;
             break;
         case ID_NomPhHW:     // Nominal phase / high word
+            Chop[num]->NomPhaseHW = package_data;
             break;
         case ID_Gate:        // Gate window
             Chop[num]->GateWidth = package_data;
             break;
         case ID_ActPhLW:     // Actual  phase / low  word
+            Chop[num]->ActPhaseLW = package_data;
             break;
         case ID_ActPhHW:     // Actual  phase / high word
+            Chop[num]->ActPhaseHW = package_data;
             break;
         case ID_DriveCurr:   // Drive current
             Chop[num]->DriveCurrent = package_data;
             break;
         case ID_AZVolt:      // Auto zero voltage of magnetic bearing
+            Chop[num]->AZVoltage = package_data;
             break;
         }
     }

@@ -35,6 +35,17 @@ public:
     // Statistics
     // ActPhaseFile
 
+    QString RatioString;
+    QString ActSpeedString;
+    QString NomSpeedString;
+    QString NomPhaseString;
+    QString ActPhaseString;
+    QString MeanDevString;
+    QString GateWidthString;
+    QString OutageString;
+    QString LastCommandString;
+
+
     QSerialPort * m_SerialPort; // Serialport
     QByteArray m_Outgoing;
     QByteArray m_Incoming;
@@ -43,6 +54,11 @@ public:
     bool RecvPackage();
     bool GetBlock();
     bool DecodeBlock();
+
+    void tics2us();
+    void tics2degree();
+    void ratio2string();
+    void command2string();
 
 };
 

@@ -5,6 +5,7 @@
 #include <QSerialPort>
 #include <QRegularExpression>
 #include <QDebug>
+#include <QLineEdit>
 #include "Chop_Def.h"
 #include "Chopper.h"
 
@@ -38,8 +39,23 @@ public:
 
     Chopper * Chop[NoOfChoppers];
 
-    void SetupSerial();
+    // GUI
+    QLineEdit * m_Ratio[NoOfChoppers];
+    QLineEdit * m_NomSpeed[NoOfChoppers];
+    QLineEdit * m_ActSpeed[NoOfChoppers];
+    QLineEdit * m_NomPhase[NoOfChoppers];
+    QLineEdit * m_ActPhase[NoOfChoppers];
+    QLineEdit * m_MeanDev[NoOfChoppers];
+    QLineEdit * m_GateWidth[NoOfChoppers];
+    QLineEdit * m_Outage[NoOfChoppers];
+    QLineEdit * m_DCSupply[NoOfChoppers];
+    QLineEdit * m_LastCommand[NoOfChoppers];
+    QLineEdit * m_DriveMode[NoOfChoppers];
+    QLineEdit * m_DriveCurrent[NoOfChoppers];
 
+
+    void SetupSerial();
+    void SetupGUI();
     void RequestBlock(int index);
     void DecodeBlock();
     unsigned int DoCheckSum(const QString pkg);

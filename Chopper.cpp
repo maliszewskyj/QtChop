@@ -76,3 +76,49 @@ bool Chopper::DecodeBlock()
     return true;
 }
 
+void Chopper::tics2us()
+{
+
+}
+void Chopper::tics2degree()
+{
+
+}
+void Chopper::ratio2string()
+{
+    int numerator, denominator;
+
+    denominator = Ratio % 0xFF;
+    numerator   = Ratio >> 8;
+    RatioString = QString::number(numerator) + "/" + QString::number(denominator);
+
+}
+void Chopper::command2string()
+{
+    switch(Command) {
+
+    case CMD_NoComand:
+        LastCommandString = "No Cmd";
+        break;
+    case CMD_StopClose:
+        LastCommandString = "Stop Close";
+        break;
+    case CMD_DriveOff:
+        LastCommandString = "Drive Off";
+        break;
+    case CMD_RunModeCW:
+        LastCommandString = "Run Up";
+        break;
+    case CMD_Stop:
+        LastCommandString = "STOP";
+        break;
+    case CMD_MBoff:
+        LastCommandString = "Bear Off";
+        break;
+    case CMD_MBon:
+        LastCommandString = "Bear On";
+        break;
+    default:
+        LastCommandString = "unknown";
+    }
+}

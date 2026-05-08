@@ -4,7 +4,7 @@
 #define INSTRUMENT   "DCS"
 #define NoOfChoppers 7
 #define ReferenceNo  0
-#define F_Quartz     48E6
+#define F_Quartz     48E6 // 48 MHz quartz clock
 #define F_DoubleQuartz F_Quartz*2
 #define F_HalfQuartz   F_Quartz/2
 
